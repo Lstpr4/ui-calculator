@@ -1,0 +1,130 @@
+*
+{
+    margin:0;
+    padding:0;
+}
+
+body
+{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  min-height:100vh;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.whole-body-container 
+{
+  background-color:whitesmoke;
+  height:700px;
+  width:500px;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.249);
+  border-radius: 10px;
+}
+.top-container
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top:20px;
+}
+#display-box
+{   
+    position: relative;
+    margin:20px auto;
+    background-color: rgb(213, 211, 211);
+    width:29rem;
+    height:7rem;
+    border-radius: 5px;
+    border-top:solid;
+    border-top-width: 7px;
+    border-top-right-radius:5px;
+    border-top-left-radius: 5px;
+    border-top-color: gray;
+}   
+
+#display-box > h2
+{
+  position: absolute;
+  right: 1rem;
+  bottom: 0.75rem;
+  font-size: 2.50rem;
+}
+.grid-buttons
+{
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: .95rem;
+  width: 28rem;
+  margin-top: 1rem;
+}
+.button
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  margin: 0;
+  padding: 0;
+  font-size: 2rem;
+  cursor:pointer;
+  transition:background 0.2s;
+  border-radius: 14px;
+  background-color: gray;
+  border:none;
+  color:white;
+  border-bottom: 6px solid rgb(77, 76, 76);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.button:hover {
+  background-color: #5f5f5f;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  transform: scale(1.1);
+}
+
+@media(max-width:500px)
+{
+  .whole-body-container {
+    height: auto;
+    width: 100vw;
+    max-width: 350px;
+    padding: 10px;
+  }
+
+  .top-container {
+    padding-top: 15px;
+  }
+
+  #display-box {
+    width: 90%;
+    height: 5rem;
+    margin: 15px auto;
+  }
+
+  #display-box > h2 {
+    font-size: 1.8rem;
+    right: 0.75rem;
+    bottom: 0.5rem;
+  }
+
+  .grid-buttons {
+    width: 90%;
+    margin: 1rem auto 0;
+    gap: 0.7rem;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .button {
+    font-size: 1.5rem;
+    aspect-ratio: 1 / 1;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}
